@@ -1,0 +1,19 @@
+#!/bin/sh
+set -e
+
+if [ "$1" = "purge" ]; then
+    rm -rf /var/lib/caddy
+    rm -rf /etc/caddy
+
+    if getent passwd caddy >/dev/null; then
+        userdel caddy || true
+    fi
+
+    if getent group caddy >/dev/null; then
+        groupdel caddy || true
+    fi
+fi
+
+if [ -d /run/systemd/system ]; then
+    systemctl daemon-reload
+fi

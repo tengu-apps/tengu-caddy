@@ -1,0 +1,15 @@
+Package: tengu-caddy
+Version: {{VERSION}}
+Architecture: {{ARCH}}
+Maintainer: Adam Ladachowski <adam.ladachowski@gmail.com>
+Description: Caddy web server with Cloudflare DNS plugin
+ Caddy is a powerful, enterprise-ready, open source web server with
+ automatic HTTPS. This build includes the Cloudflare DNS plugin for
+ DNS-01 ACME challenges, allowing TLS certificate provisioning behind
+ Cloudflare proxy.
+Section: web
+Priority: optional
+Depends: libc6
+Conflicts: caddy
+Provides: caddy
+Replaces: caddy

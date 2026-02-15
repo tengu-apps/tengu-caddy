@@ -1,0 +1,7 @@
+#!/bin/sh
+set -e
+
+if [ -d /run/systemd/system ]; then
+    systemctl stop caddy.service || true
+    systemctl disable caddy.service || true
+fi
