@@ -1,0 +1,13 @@
+# Global options
+{
+    # email for ACME account
+    # email you@example.com
+
+    # Uncomment to use Cloudflare DNS-01 challenge
+    # acme_dns cloudflare {env.CF_API_TOKEN}
+}
+
+# Example site
+# example.com {
+#     reverse_proxy localhost:8080
+# }
