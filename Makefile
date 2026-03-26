@@ -1,4 +1,4 @@
-VERSION := 2.10.2
+VERSION := 2.11.2
 REVISION := 1
 CADDY_PLUGINS := github.com/caddy-dns/cloudflare
 
