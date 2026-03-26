@@ -1,6 +1,6 @@
 VERSION := 2.11.2
 REVISION := 2
-CADDY_PLUGINS := github.com/caddy-dns/cloudflare
+CADDY_PLUGINS := github.com/caddy-dns/cloudflare@v0.2.4
 
 ARCH := $(shell dpkg --print-architecture 2>/dev/null || uname -m | sed 's/x86_64/amd64/' | sed 's/aarch64/arm64/')
 OS := linux
