@@ -1,27 +1,37 @@
 # tengu-caddy
 
-Pre-built Caddy .deb packages with Cloudflare DNS plugin for Tengu PaaS.
+Caddy web server with the Cloudflare DNS plugin built in. Pre-built binaries for macOS and Linux, plus .deb packages for servers.
 
 ## Features
 
 - Caddy web server with automatic HTTPS
-- Cloudflare DNS-01 ACME challenge support
+- Cloudflare DNS-01 ACME challenge support (not included in stock Caddy)
 - Works behind Cloudflare proxy (orange cloud)
 - Automatic certificate renewal
 
-## Installation
+## Install
 
-Download from [Releases](https://github.com/saiden-dev/tengu-caddy/releases):
+### Homebrew (macOS / Linux)
+
+```bash
+brew install tengu-apps/tap/tengu-caddy
+```
+
+### Debian/Ubuntu (.deb)
 
 ```bash
 # ARM64 (e.g., Hetzner CAX)
-wget https://github.com/saiden-dev/tengu-caddy/releases/latest/download/tengu-caddy_2.10.2-1_arm64.deb
-sudo dpkg -i tengu-caddy_2.10.2-1_arm64.deb
+curl -fsSLO https://github.com/tengu-apps/tengu-caddy/releases/latest/download/tengu-caddy_amd64.deb
+sudo dpkg -i tengu-caddy_amd64.deb
 
 # AMD64
-wget https://github.com/saiden-dev/tengu-caddy/releases/latest/download/tengu-caddy_2.10.2-1_amd64.deb
-sudo dpkg -i tengu-caddy_2.10.2-1_amd64.deb
+curl -fsSLO https://github.com/tengu-apps/tengu-caddy/releases/latest/download/tengu-caddy_arm64.deb
+sudo dpkg -i tengu-caddy_arm64.deb
 ```
+
+### Binary download
+
+Download standalone binaries from [Releases](https://github.com/tengu-apps/tengu-caddy/releases).
 
 ## Configuration
 
